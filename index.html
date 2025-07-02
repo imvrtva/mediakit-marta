@@ -7,65 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #1d1d1f;
-      line-height: 1.6;
-      padding: 2rem;
-    }
-    header {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-      padding: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #1d1d1f;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    a {
-      color: #007aff;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+<div id="floating-particles"></div>
 <body>
   <header>
     <h1>Marta Ca. – Media Kit</h1>
@@ -75,8 +19,8 @@
   <section>
     <h2>📊 Key Stats</h2>
     <ul>
-      <li>Instagram: 12.3K followers</li>
-      <li>TikTok: 45K followers</li>
+      <li>Instagram: <span id="ig-followers"></span></li>
+      <li>TikTok: <span id="tt-followers"></span></li>
       <li>Audience: 89% women, mainly 18–34 y/o</li>
     </ul>
   </section>
@@ -112,5 +56,8 @@
   <footer>
     &copy; 2025 Marta Ca. – All rights reserved
   </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
