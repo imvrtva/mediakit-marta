@@ -21,6 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
       container.removeChild(particle);
     }, 13000);
   };
+  setInterval(createParticle, 500);
 
-  setInterval(createParticle, 500); // Crea una particella ogni 0.5s
+  // Header dinamico completo
+
+const hero = document.getElementById("hero");
+
+window.addEventListener("scroll", () => {
+  const hero = document.getElementById("hero");
+  const threshold = 100;
+
+  hero.classList.toggle("shrink", window.scrollY > threshold);
+});
+
 });

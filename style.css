@@ -1,4 +1,8 @@
+
+
 body {
+  background: linear-gradient(135deg, #ffe0ec, #e0e7ff, #fff4cc, #daf5f0);
+
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: #f9f9f9;
@@ -11,7 +15,7 @@ header {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding: 4rem 1rem 2rem;
+  padding: 4rem;
 }
 
 header h1 {
@@ -90,4 +94,90 @@ footer {
     transform: translateY(110vh);
     opacity: 0;
   }
+}
+
+.hero {
+  background: linear-gradient(135deg, #ffe0ec 0%, #fbd6f5 100%);
+  color: #1d1d1f;
+  padding: 4rem 3rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+.hero.shrink {
+  padding: 1rem 2rem;
+  gap: 2rem;
+  background: rgba(255, 224, 236, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.hero-image {
+  flex-shrink: 0;
+  transition: transform 0.5s ease, margin 0.5s ease;
+  margin-right: 2rem;
+}
+
+.hero-image img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.hero.shrink .hero-image img {
+  transform: scale(0.4);
+}
+
+.hero-text {
+  position: relative;
+  max-width: 600px;
+  min-height: 4.5rem; /* spazio per evitare salti */
+}
+
+.hero-text > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.hero-text .hero-intro {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.hero.shrink .hero-text .hero-intro {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  position: absolute;
+}
+
+.hero.shrink .hero-text .hero-mediakit {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+  transition-delay: 0.1s;
 }

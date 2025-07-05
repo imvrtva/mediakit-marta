@@ -8,82 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .hero {
-      background: linear-gradient(135deg, #ffe0ec 0%, #fbd6f5 100%);
-      color: #1d1d1f;
-      padding: 4rem 1rem 3rem;
-      text-align: center;
-      border-bottom-left-radius: 60px;
-      border-bottom-right-radius: 60px;
-      position: relative;
-      transition: all 0.4s ease;
-    }
-    .hero.sticky {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 0.8rem 1rem;
-      border-radius: 0 0 16px 16px;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      z-index: 999;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    .hero.sticky .hero-image img {
-      width: 50px;
-      height: 50px;
-      margin: 0;
-    }
-    .hero-image {
-      transition: all 0.4s ease;
-    }
-    .hero-image img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-      transition: all 0.4s ease;
-    }
-    .hero-text {
-      transition: all 0.4s ease;
-    }
-    .hero-text h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.6rem;
-      color: #c2185b;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-      color: #4a4a4a;
-    }
-    .hero.sticky .hero-text h1,
-    .hero.sticky .hero-text p {
-      font-size: 1rem;
-      margin: 0;
-      text-align: left;
-    }
-  </style>
 </head>
 <body>
   <div id="floating-particles"></div>
 
-  <section class="hero" id="hero">
-    <div class="hero-image">
-      <img src="foto/foto.heic" alt="Marta Ca." />
-    </div>
-    <div class="hero-text">
+ <section class="hero" id="hero">
+  <div class="hero-image">
+    <img src="foto/foto.heic" alt="Marta Ca." />
+  </div>
+  <div class="hero-text">
+    <div class="hero-intro">
       <h1>Ciao! Sono Marta 💫</h1>
-      <p>Content creator su TikTok & Instagram – parlo di empowerment femminile, educazione sessuale e relazioni vere, come la tua migliore amica ti racconterebbe davvero.</p>
+      <p>
+        Content creator su TikTok & Instagram – parlo di empowerment femminile,
+        educazione sessuale e relazioni vere, come la tua migliore amica ti racconterebbe davvero.
+      </p>
     </div>
-  </section>
+    <div class="hero-mediakit">
+      <h1>Media Kit</h1>
+    </div>
+  </div>
+</section>
 
   <section>
     <h2>📊 Key Stats</h2>
