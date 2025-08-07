@@ -1,87 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marta Ca. – Media Kit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>With Love - Marta</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="floating-particles"></div>
+  <div class="container">
+    <!-- HEADER -->
+    <header>
+      <h1>WITH <span>♥</span> LOVE, <strong>Marta</strong></h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
 
- <section class="hero" id="hero">
-  <div class="hero-image">
-    <img src="foto/foto.heic" alt="Marta Ca." />
+    <!-- BODY (solo foto + icone pop) -->
+    <main>
+      <div class="photo-container">
+        <img src="foto/me1.PNG" alt="Tua Foto" class="main-photo">
+    
+        <!-- Icone Pop -->
+        <a href="https://instagram.com" class="icon pop1">
+          <span class="label">Missione</span>
+          <img src="foto/missione.png" alt="Missione">
+        </a>
+        <a href="https://tiktok.com" class="icon pop2">
+          <span class="label">Chi Sono</span>
+          <img src="foto/sono.png" alt="Sono">
+        </a>
+        <a href="#" class="icon pop3">
+          <span class="label">Collab</span>
+          <img src="foto/collab.png" alt="Collab">
+        </a>
+        <a href="#" class="icon pop4">
+          <span class="label">Link Utili</span>
+          <img src="foto/link.png" alt="Link">
+        </a>
+      </div>
+    </main>
+    
+    
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="marquee">
+        <p>✦ Let's connect and create beyond your business dreams ✦ CEO Baddie vibes ✦</p>
+      </div>
+    </footer>
   </div>
-  <div class="hero-text">
-    <div class="hero-intro">
-      <h1>Ciao! Sono Marta 💫</h1>
-      <p>
-        Content creator su TikTok & Instagram – parlo di empowerment femminile,
-        educazione sessuale e relazioni vere, come la tua migliore amica ti racconterebbe davvero.
-      </p>
-    </div>
-    <div class="hero-mediakit">
-      <h1>Media Kit</h1>
-    </div>
-  </div>
-</section>
-
-  <section>
-    <h2>📊 Key Stats</h2>
-    <ul>
-      <li>Instagram: <span id="ig-followers"></span></li>
-      <li>TikTok: <span id="tt-followers"></span></li>
-      <li>Audience: 89% women, mainly 18–34 y/o</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🎯 Content Themes</h2>
-    <p>Sexual education, menstrual cycle, conscious relationships, assertive communication, female well-being.</p>
-  </section>
-
-  <section>
-    <h2>🤝 Past Collaborations</h2>
-    <p>Worked with [Brand 1], [Brand 2], [Brand 3] on social campaigns, unboxings, and sponsored videos.</p>
-  </section>
-
-  <section>
-    <h2>🛠️ What I Offer</h2>
-    <ul>
-      <li>Sponsored Reels & TikToks</li>
-      <li>Instagram Stories with tags/links</li>
-      <li>PR Unboxings</li>
-      <li>Product reviews</li>
-      <li>Giveaways & challenges</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📬 Contact</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/tuohandle" target="_blank">@tuohandle</a></p>
-    <p>TikTok: <a href="https://tiktok.com/@tuohandle" target="_blank">@tuohandle</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Marta Ca. – All rights reserved
-  </footer>
-
-  <script src="data.js"></script>
-  <script src="script.js"></script>
-  <script>
-    window.addEventListener("scroll", function () {
-      const hero = document.getElementById("hero");
-      if (window.scrollY > 100) {
-        hero.classList.add("sticky");
-      } else {
-        hero.classList.remove("sticky");
-      }
-    });
-  </script>
 </body>
 </html>

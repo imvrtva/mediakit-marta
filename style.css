@@ -1,183 +1,159 @@
-
-
-body {
-  background: linear-gradient(135deg, #ffe0ec, #e0e7ff, #fff4cc, #daf5f0);
-
+html, body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #1d1d1f;
-  line-height: 1.6;
-  padding: 2rem;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* 🔥 blocca lo scroll */
+  background: #ffe1f0;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 50px 50px;
+  font-family: 'Poppins', sans-serif;
+  color: #3a3a3a;
 }
 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
 header {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
-  padding: 4rem;
+  padding: 10px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #ff4fa0;
+  margin: 0;
 }
 
-header p {
-  font-size: 1.1rem;
-  color: #555;
+header nav {
+  margin-top: 5px;
 }
 
-section {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem 1rem;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #1d1d1f;
-}
-
-section ul {
-  padding-left: 1.5rem;
-}
-
-section a {
-  color: #007aff;
+header nav a {
   text-decoration: none;
+  color: #3a3a3a;
+  font-weight: 600;
+  margin: 0 10px;
 }
 
+/* Footer subito sotto header */
 footer {
+  background: #ff4fa0;
+  color: white;
   text-align: center;
-  padding: 4rem 1rem 2rem;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-#floating-particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-#floating-particles .particle {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.05);
-  animation: floatDown 10s linear infinite;
-}
-
-@keyframes floatDown {
-  0% {
-    transform: translateY(-10px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(110vh);
-    opacity: 0;
-  }
-}
-
-.hero {
-  background: linear-gradient(135deg, #ffe0ec 0%, #fbd6f5 100%);
-  color: #1d1d1f;
-  padding: 4rem 3rem;
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 3rem;
-  transition: all 0.5s ease;
+  overflow: hidden;
+  height: 30px;
+  padding-bottom: 30px;
   z-index: 10;
 }
 
-.hero.shrink {
-  padding: 1rem 2rem;
-  gap: 2rem;
-  background: rgba(255, 224, 236, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
+.marquee {
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+  font-size: 14px;
+  line-height: 30px;
 }
 
-.hero-image {
-  flex-shrink: 0;
-  transition: transform 0.5s ease, margin 0.5s ease;
-  margin-right: 2rem;
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
 }
 
-.hero-image img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: scale(1);
-  transform-origin: center;
-  transition: transform 0.5s ease;
+/* Corpo pagina */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0;
 }
 
-.hero.shrink .hero-image img {
-  transform: scale(0.4);
-}
-
-.hero-text {
+.photo-container {
   position: relative;
-  max-width: 600px;
-  min-height: 4.5rem; /* spazio per evitare salti */
 }
 
-.hero-text > div {
+.main-photo {
+  width: 450px;
+  z-index: 1;
+  position: relative;
+  margin-bottom: -20px;
+}
+
+
+.icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  pointer-events: none;
-  will-change: opacity, transform;
+  text-align: center;
+  transition: transform 0.3s ease;
+  z-index: 2;
 }
 
-.hero-text .hero-intro {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  position: relative;
+.icon img {
+  width: 70px; /* dimensione standard, regolata poi per ogni popX */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.hero.shrink .hero-text .hero-intro {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  position: absolute;
+.icon:hover {
+  transform: scale(1.2) rotate(10deg);
 }
 
-.hero.shrink .hero-text .hero-mediakit {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  position: relative;
-  transition-delay: 0.1s;
+/* Stile etichetta */
+.label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff4fa0;
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Effetto pop al passaggio */
+.icon:hover .label {
+  background: #ff4fa0;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Grandezza e posizioni diverse per ogni icona */
+.pop1 {
+  top: 100px;
+  left: -80px;
+}
+.pop1 img {
+  width: 90px; /* piccola */
+}
+
+.pop2 {
+  top: -70px;
+  left: -50px;
+}
+.pop2 img {
+  width: 70px; /* più grande */
+}
+
+.pop3 {
+  top: -80px;
+  right: 80px;
+}
+.pop3 img {
+  width: 90px; /* media */
+}
+
+.pop4 {
+  top: 100px;
+  left: 400px;
+}
+.pop4 img {
+  width: 90px; /* grande */
 }
