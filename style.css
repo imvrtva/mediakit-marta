@@ -11,6 +11,12 @@ html, body {
   color: #3a3a3a;
 }
 
+a {
+  text-decoration: none; /* toglie la sottolineatura */
+  color: inherit; /* eredita il colore dal contenitore, oppure imposta tu il colore */
+}
+
+
 .container {
   height: 100%;
   display: flex;
@@ -156,4 +162,59 @@ main {
 }
 .pop4 img {
   width: 90px; /* grande */
+}
+
+
+.contact-section {
+  padding: 40px 20px 60px; /* TOP | LEFT/RIGHT | BOTTOM */
+  text-align: center;
+  border-top: 2px solid #ff99cc;
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: #d63384;
+}
+
+.contact-section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-button {
+  background-color: #ff66b2;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #e05599;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.contact-page {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
 }
